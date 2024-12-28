@@ -1,0 +1,145 @@
+    *{
+    /* 初始化 */
+    margin: 0;
+    padding: 0;
+    }
+    /* 整体样式 */
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* background: linear-gradient(135deg, #e6f7ff 0%, #d9edfe 100%); */
+        /* 渐变背景 */
+        background: #a1c4fd;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #a1c4fd, #c2e9fb);  /* Chrome 10-25, Safari 5.1-6 */
+        background-image: linear-gradient(120deg, #a1c4fd, #c2e9fb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        /* 溢出隐藏 */
+        overflow: hidden;
+    }
+    h1 {
+        text-align: center;
+        color: #3498db;
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .container {
+        max-width: 700px;
+        background-color: #fff;
+        padding: 45px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+        overflow: hidden;
+        animation: slideInUp 1s ease-in-out forwards;
+        position: relative;
+    }
+    .container p {
+        text-align: center;
+        color: #637280;
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    .radio-group label {
+        display: block;
+        margin-bottom: 18px;
+        font-size: 19px;
+        color: #333;
+    }
+    .radio-group input[type="radio"] {
+        margin-right: 10px;
+    }
+    .buttons {
+        text-align: center;
+        margin-top: 25px;
+    }
+    .buttons button {
+        padding: 18px 40px;
+        margin: 0 15px;
+        border: none;
+        border-radius: 7.5px;
+        color: #fff;
+        background-color: #3498db;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+    .buttons button:before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: 120%;
+        height: 120%;
+        background-color: rgba(52, 152, 219, 0.3);
+        transform-origin: center center;
+        transform: scale(1) rotate(45deg);
+    }
+    .buttons button:hover {
+        background-color: #2980b9;
+        transform: translateY(-5px);
+    }
+    .buttons button:disabled {
+        background-color: #e7ebee;
+        cursor: not-allowed;
+        opacity: 0.8;
+    }
+    .result-container {
+        text-align: center;
+        margin-top: 30px;
+        padding: 50px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        display: none;
+        animation: slideInUp 1s ease-in-out forwards;
+    }
+    .result-title {
+        font-size: 32px;
+        color: #2980b9;
+        margin-bottom: 20px;
+    }
+    .result-container p {
+        font-size: 22px;
+        color: #637280;
+        margin-bottom: 25px;
+    }
+    
+    .result-container ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .result-container ul li {
+        font-size: 18px;
+        color: #637280;
+        margin-bottom: 10px;
+        display: block;
+        float: left;
+    }
+    .result-container ul li:last-child {
+        margin-bottom: 0;
+    }
+    
+    @keyframes slideInUp {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        color: white;
+        text-align: center;
+        font-size: large;
+    }
